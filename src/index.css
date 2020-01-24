@@ -1,0 +1,429 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh;
+}
+.map svg {
+  width: 100%;
+  height: 100%;
+}
+
+path:hover, circle:hover {
+  stroke: blue;
+  fill: blue;
+}
+
+.resultsContainer, .resultsContainer1, .resultsContainer2, .resultsContainer3, .resultsContainer4, .resultsContainer5 {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+/* body {
+  font-family: 'Open Sans', regular;
+  font-size: 12px;
+  background-color: #1c2430;
+  color: white;
+  box-sizing: border-box;
+  min-width: 350px;
+}
+
+.hidden {
+  display: none;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+.resultsContainer {
+  overflow-x: auto;
+  order: 2;
+}
+
+.totalInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #002868;
+  order: 3;
+  border: 2px red ridge;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+
+.mainTitle{
+  font-family: 'Calistoga', regular;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.map {
+  display: flex;
+  width: 100vw;
+  height: 100vh; 
+}
+
+.map svg {
+  width: 100%;
+  height: 100%;
+}
+
+#us-map{
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.byState {
+  margin: 0 0 0 -12%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.byRace {
+  margin: 0 0 0 -10%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.bySize {
+  margin: 0 0 0 -16%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.checkboxparent4 {
+  margin: 0 0 0 0;
+  position: relative;
+  right: 30px;
+}
+
+.byAS {
+  margin: 0 0 0 0;
+  width: 100%;
+  order: 3;
+}
+
+.male, .female, .AStotal {
+  display: flex;
+  justify-content: center;
+}
+
+.female {
+  margin: 0 0 0 -20%;
+  width: 90%;
+}
+
+.AStotal {
+  width: 100%
+}
+
+.male {
+  margin: 0 0 0 -10%;
+  width: 80%;
+}
+
+.genders {
+  display: flex;
+  justify-content: center;
+}
+
+.raceandsize {
+  display: flex;
+  width: 100%;
+  order: 2;
+}
+
+.resultsContainer1, .resultsContainer2, .resultsContainer3, .resultsContainer4, .resultsContainer5 {
+  display: flex;
+  text-align: center;
+  margin: 0px 0 0 0;
+}
+
+tr, td, th {
+  border: 1px white solid;
+}
+
+.resultsStates1, .resultsStates2, .resultsStates3, .resultsStates4, .resultsStates5 {
+  margin: 2px 0 0 0;
+}
+
+.resultsRaces, .resultsSizes, .resultsASM, .resultsASF, .resultsHousehold {
+  margin: 2px 0 0 0;
+}
+
+.plussign:hover {
+  cursor: pointer;
+}
+
+path:hover, circle:hover {
+  stroke: #002868 !important;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: #002868 !important;
+  cursor: pointer;
+}
+
+#path67 {
+  fill: none !important;
+  stroke: #A9A9A9 !important;
+  cursor: default;
+}
+
+#info-box { 
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 5px;
+  font-family: arial;
+}
+
+#icon_us{
+  width:"50";
+  height:"10";
+}
+
+.button-container {
+  display: flex;
+  width: 100%; 
+  height: 35px;
+  margin: 10px 0 0px 0;
+  padding: 0 0 10px 0;
+  justify-content: center;
+  order: 1;
+  border-bottom: 2px red ridge;
+}
+
+.button-container1 {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  justify-content: space-between;
+  order: 1;
+}
+
+#searchbutton {
+  order: 5;
+}
+
+#selectmap {
+  order: 1;
+}
+
+#unselectmap {
+  order: 2;
+}
+
+#togglechecks {
+  order: 3;
+}
+
+#showhide {
+  order: 4;
+}
+
+#searchbutton {
+  background: maroon;
+  color: white;
+}
+
+.table-title {
+  background-color: #F4FF7D;
+  color: black;
+  min-width: 100px;
+}
+
+.table-state {
+  background-color: #F08F59;
+  color: black;
+  min-width: 100px;
+}
+
+.table-parameter {
+  background-color: #0AF0A1;
+  color: black;
+  min-width: 70px;
+}
+
+.table-data {
+  min-width: 70px;
+  background-color: #AD89FF;
+  color: black;
+}
+
+@media only screen and (min-width: 940px) {
+  
+body {
+  font-size: 14px;
+}
+
+.order {
+  display: grid;
+  padding: 0 0 0 3px;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 
+    "x1 x2"
+    "x3 x3";
+  grid-row-gap: 3px;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  grid-area: x1;
+}
+
+.resultsContainer {
+  overflow-x: auto;
+  grid-area: x3;
+}
+  
+.options {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.checkbox-container {
+  grid-area: x2;
+  margin: 5px 15px 0px 0;
+  min-width: 360px;
+}
+
+.button-container {
+  width: 100%;
+  height: 35px;
+  margin: 0 0 0 0;
+  padding: 10px 0 10px 0;
+  justify-content: center;
+  order: 3;
+  border-top: 2px red ridge;
+  border-bottom: none;
+}
+  
+.button-container1 {
+  height: 35px;
+}
+  
+.raceandsize {
+  margin: 15px 0 0 0;
+  order: 1;
+}
+
+.byAS {
+  margin: -25px 0 0px 0;
+  width: 100%;
+  order: 2;
+}
+  
+.genders {
+  margin: auto;
+}
+
+#searchbutton {
+  order: 1;
+}
+
+#selectmap {
+  order: 2;
+}
+
+#unselectmap {
+  order: 3;
+}
+
+#togglechecks {
+  order: 4;
+}
+
+#showhide {
+  order: 5;
+}
+
+.table-title {
+  min-width: 120px;
+}
+
+.table-state {
+  min-width: 120px;
+}
+
+.table-parameter {
+  min-width: 80px;
+}
+
+.table-data {
+  min-width: 80px;
+}
+  
+.resultsContainer1, .resultsContainer2, .resultsContainer3, .resultsContainer4 {
+  display: flex;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+  
+.resultsContainer5 {
+  display: none;
+}
+
+tr, td, th {
+  border: 1px white solid;
+}
+
+.resultsStates1, .resultsStates2, .resultsStates3, .resultsStates4, .resultsStates5 {
+  margin: 5px 5px 0 0;
+}
+
+.resultsRaces, .resultsSizes, .resultsASM, .resultsASF, .resultsHousehold {
+  margin: 5px 0 0 0;
+}
+} */
