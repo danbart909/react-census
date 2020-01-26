@@ -240,6 +240,7 @@ export default class Checkboxes extends Component {
 
 	showHide = () => {
 		if ($('li:hidden').length !== 0) {
+      console.log('show')
 			this.setState({
         raceShow: true,
         sizeShow: true,
@@ -248,6 +249,7 @@ export default class Checkboxes extends Component {
         ageFemaleShow: true
       })
 		} else {
+      console.log('hide')
 			this.setState({
         raceShow: false,
         sizeShow: false,
