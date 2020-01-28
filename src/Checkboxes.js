@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import options from './options'
 // import ReactHtmlParser from 'react-html-parser'
 import $ from 'jquery'
+import { Button } from 'react-bootstrap'
 
 export default class Checkboxes extends Component {
   constructor(props) {
@@ -263,11 +264,11 @@ export default class Checkboxes extends Component {
 	buttons = () => {
 		return (
 			<>
-				<button type='submit'>Submit</button>
-				<button type='button' onClick={() => {this.selectMap()}}>Select</button>
-				<button type='button' onClick={() => {this.unSelectMap()}}>Unselect</button>
-				<button type='button' onClick={() => {this.toggleChecks()}}>Toggle</button>
-				<button type='button' onClick={() => {this.showHide()}}>Show/Hide</button>
+				<Button variant='primary' type='submit'>Submit</Button>
+				<Button variant="success" type='button' onClick={() => {this.selectMap()}}>Select</Button>
+				<Button variant="danger" type='button' onClick={() => {this.unSelectMap()}}>Unselect</Button>
+				<Button variant="dark" type='button' onClick={() => {this.toggleChecks()}}>Toggle</Button>
+				<Button variant='info' type='button' onClick={() => {this.showHide()}}>Show/Hide</Button>
 			</>
 		)
 	}

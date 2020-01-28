@@ -4,13 +4,6 @@ import $ from 'jquery'
 export default class Results extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      resultsContainer1: false,
-      resultsContainer2: false,
-      resultsContainer3: false,
-      resultsContainer4: false,
-      resultsContainer5: false
-    }
   }
 
 	states1 = () => {
@@ -87,15 +80,6 @@ export default class Results extends Component {
         )
       );
     }
-    if (this.props.state.labels.race.length !== 0) {
-      this.setState({
-        resultsContainer1: true
-      })
-    } else {
-      this.setState({
-        resultsContainer1: false
-      })
-    }
     let tableRaces = (
       <table>
         <tr>
@@ -121,15 +105,6 @@ export default class Results extends Component {
       sizeValues.push(
         this.props.state.response[i].slice(this.props.state.labels.race.length, (this.props.state.labels.race.length + this.props.state.labels.size.length))
       );
-    }
-		if (this.props.state.labels.size.length !== 0) {
-			this.setState({
-        resultsContainer2: true
-      })
-    } else {
-      this.setState({
-        resultsContainer2: false
-      })
     }
     let tableSizes = (
       <table>
@@ -157,15 +132,6 @@ export default class Results extends Component {
         this.props.state.response[i].slice((this.props.state.labels.race.length + this.props.state.labels.size.length), (this.props.state.labels.race.length + this.props.state.labels.size.length + this.props.state.labels.ASM.length))
       );
     }
-		if (this.props.state.labels.ASM.length !== 0) {
-			this.setState({
-        resultsContainer3: true
-      })
-    } else {
-      this.setState({
-        resultsContainer3: false
-      })
-    }
     let tableASM = (
       <table>
         <tr>
@@ -192,15 +158,6 @@ export default class Results extends Component {
         this.props.state.response[i].slice((this.props.state.labels.race.length + this.props.state.labels.size.length), (this.props.state.labels.race.length + this.props.state.labels.size.length + this.props.state.labels.ASM.length))
       );
     }
-		if (this.props.state.labels.ASF.length !== 0) {
-			this.setState({
-        resultsContainer4: true
-      })
-    } else {
-      this.setState({
-        resultsContainer4: false
-      })
-    }
     let tableASF = (
       <table>
         <tr>
@@ -223,25 +180,21 @@ export default class Results extends Component {
 	render() {
 		return (
 			<>
-				{this.state.resultsContainer1 ? <div className="resultsContainer1">
+				{this.props.state.labels.race.length !== 0 ? <div className="resultsContainer1">
 					<div className="resultsStates1">{this.states1()}</div>
 					<div className="resultsRaces">{this.resultsRace()}</div>
 				</div> : ''}
-				{this.state.resultsContainer2 ? <div className="resultsContainer2">
+				{this.props.state.labels.size.length !== 0 ? <div className="resultsContainer2">
 					<div className="resultsStates2">{this.states2()}</div>
 					<div className="resultsSizes">{this.resultsSizes()}</div>
 				</div> : ''}
-				{this.state.resultsContainer3 ? <div className="resultsContainer3">
+				{this.props.state.labels.ASM.length !== 0 ? <div className="resultsContainer3">
 					<div className="resultsStates3">{this.states3()}</div>
 					<div className="resultsASM">{this.resultsASM()}</div>
 				</div> : ''}
-				{this.state.resultsContainer4 ? <div className="resultsContainer4">
+				{this.props.state.labels.ASF.length !== 0 ? <div className="resultsContainer4">
 					<div className="resultsStates4">{this.states4()}</div>
 					<div className="resultsASF">{this.resultsASF()}</div>
-				</div> : ''}
-				{this.state.resultsContainer5 ? <div className="resultsContainer5">
-					<div className="resultsStates5"></div>
-					<div className="resultsHousehold"></div>
 				</div> : ''}
 				{/* <button onClick={console.log('')}>generate</button> */}
 			</>

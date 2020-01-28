@@ -134,6 +134,7 @@ export default class App extends Component {
   render() {
     return (
       <>
+        <button className='btn-primary'>bootstrap</button>
         <section className="map-container">
           <Map
             clickAdd={this.clickAdd}
