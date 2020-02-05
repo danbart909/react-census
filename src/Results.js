@@ -12,7 +12,7 @@ export default class Results extends Component {
         <tr>
           <th className="table-title">Race</th>
         </tr>
-        {this.props.state.name.map(x => (
+        {this.props.state.labels.states.map(x => (
           <tr>
             <th className="table-state">{x}</th>
           </tr>
@@ -28,7 +28,7 @@ export default class Results extends Component {
         <tr>
           <th className="table-title">Household</th>
         </tr>
-        {this.props.state.name.map(x => (
+        {this.props.state.labels.states.map(x => (
           <tr>
             <th className="table-state">{x}</th>
           </tr>
@@ -44,14 +44,14 @@ export default class Results extends Component {
         <tr>
           <th className="table-title">Male</th>
         </tr>
-        {this.props.state.name.map(x => (
+        {this.props.state.labels.states.map(x => (
           <tr>
             <th className="table-state">{x}</th>
           </tr>
         ))}
       </table>
     );
-    return tableStates3;
+    return tableStates3;  
 	}
 
 	states4 = () => {
@@ -60,7 +60,7 @@ export default class Results extends Component {
         <tr>
           <th className="table-title">Female</th>
         </tr>
-        {this.props.state.name.map(x => (
+        {this.props.state.labels.states.map(x => (
           <tr>
             <th className="table-state">{x}</th>
           </tr>

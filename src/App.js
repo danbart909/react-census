@@ -12,6 +12,7 @@ export default class App extends Component {
       id: [],
       name: [],
       labels: {
+        states: [],
         race: [],
         size: [],
         ASM: [],
@@ -87,6 +88,7 @@ export default class App extends Component {
     $('.resultsContainer').show()
     this.setState({
       labels: {
+        states: this.state.name,
         race: raceNamesA,
         size: sizeNamesA,
         ASM: ASMNamesA,
