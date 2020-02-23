@@ -155,7 +155,7 @@ export default class Results extends Component {
     let ASFValues = [];
     for (let i = 1; i < this.props.state.response.length; i++) {
       ASFValues.push(
-        this.props.state.response[i].slice((this.props.state.labels.race.length + this.props.state.labels.size.length), (this.props.state.labels.race.length + this.props.state.labels.size.length + this.props.state.labels.ASM.length))
+        this.props.state.response[i].slice((this.props.state.labels.race.length + this.props.state.labels.size.length + this.props.state.labels.ASM.length), (this.props.state.labels.race.length + this.props.state.labels.size.length + this.props.state.labels.ASM.length + this.props.state.labels.ASF.length))
       );
     }
     let tableASF = (
